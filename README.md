@@ -61,6 +61,14 @@ novacap-ops-dashboard/
 └── README.md
 ```
 
+## Screenshots
+
+### Live Metrics Dashboard
+![Metrics Dashboard](docs/metrics.png)
+
+### Incidents Management
+![Incidents](docs/incidents.png)
+
 ## API Endpoints
 
 | Method | Endpoint | Description |
@@ -126,8 +134,9 @@ Swagger docs at `http://localhost:8000/docs`
 
 ## Roadmap
 
-- [ ] React dashboard with live metrics charts
-- [ ] Deploy to Azure Container Apps
+- [x] React dashboard with live metrics charts
+- [x] Human-in-the-loop approve/reject interface
 - [ ] GitHub Actions CI/CD pipeline
+- [ ] Deploy to Azure Container Apps
 - [ ] Azure Monitor integration for real observability
 - [ ] WebSocket for real-time metric updates
