@@ -4,6 +4,12 @@ An AI-powered IT operations dashboard for NovaCap Bank. AI agents monitor bankin
 
 > Built as part of an AI Engineer upskilling roadmap targeting senior AI Engineer and AI Solution Architect roles.
 
+## Live Demo
+
+- **Frontend:** https://yellow-mushroom-04a1a540f.7.azurestaticapps.net
+- **API:** https://novacap-ops-backend.bravebeach-bb6dfe67.eastus.azurecontainerapps.io
+- **Swagger:** https://novacap-ops-backend.bravebeach-bb6dfe67.eastus.azurecontainerapps.io/docs
+
 ## How It Works
 
 1. Metrics simulator generates real-time banking system metrics (CPU, memory, error rate, response time, transaction volume)
@@ -136,7 +142,8 @@ Swagger docs at `http://localhost:8000/docs`
 
 - [x] React dashboard with live metrics charts
 - [x] Human-in-the-loop approve/reject interface
-- [ ] GitHub Actions CI/CD pipeline
-- [ ] Deploy to Azure Container Apps
-- [ ] Azure Monitor integration for real observability
-- [ ] WebSocket for real-time metric updates
+- [x] GitHub Actions CI/CD pipeline
+- [x] Deploy backend to Azure Container Apps
+- [x] Deploy frontend to Azure Static Web Apps
+- [ ] Azure Monitor integration
+- [ ] WebSocket for real-time updates
