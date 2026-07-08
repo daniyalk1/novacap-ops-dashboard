@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts'
 
-const API = 'http://localhost:8000'
+const API = 'https://novacap-ops-backend.bravebeach-bb6dfe67.eastus.azurecontainerapps.io'
 
 function MetricsDashboard() {
   const [metricsHistory, setMetricsHistory] = useState([])

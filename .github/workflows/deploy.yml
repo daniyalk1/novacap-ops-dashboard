@@ -1,0 +1,40 @@
+name: Deploy NovaCap Ops Backend
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'backend/**'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Log in to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Log in to Azure Container Registry
+        run: |
+          az acr login --name novacapregistry
+
+      - name: Build Docker image
+        run: |
+          docker build -t novacapregistry.azurecr.io/novacap-ops-backend:latest ./backend
+
+      - name: Push Docker image
+        run: |
+          docker push novacapregistry.azurecr.io/novacap-ops-backend:latest
+
+      - name: Deploy to Azure Container Apps
+        run: |
+          az containerapp update \
+            --name novacap-ops-backend \
+            --resource-group danyal-dev-rg \
+            --image novacapregistry.azurecr.io/novacap-ops-backend:latest

@@ -21,4 +21,4 @@ app.include_router(actions.router, prefix="/api", tags=["Actions"])
 
 @app.get("/")
 def root():
-    return {"message": "NovaCap AI Operations Dashboard API is running"}
+    return {"message": "NovaCap AI Operations Dashboard API is running", "version": "1.1.0"}

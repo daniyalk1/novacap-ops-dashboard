@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const API = 'http://localhost:8000'
+const API = 'https://novacap-ops-backend.bravebeach-bb6dfe67.eastus.azurecontainerapps.io'
 
 function IncidentsList() {
   const [incidents, setIncidents] = useState([])
